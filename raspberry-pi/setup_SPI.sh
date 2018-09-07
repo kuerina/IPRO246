@@ -7,3 +7,14 @@ echo "${USERMS} : Unziping the library"
 unzip master.zip
 echo "${USERMS} : Deleting reduntant zip folder"
 rm master.zip
+echo "${USERMS} : Setting up the library (cd py-spidev-master ; sudo python3 setup.py install) "
+cd py-spidev-master
+sudo python setup.py install
+sudo python3 setup.py install
+cd ..
+mkdir NRF24L01
+cd NRF24L01
+git clone https://github.com/BLavery/lib_nrf24
+cd lib_nrf24
+cp lib_nrf24.py ..
+
